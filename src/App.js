@@ -1,23 +1,34 @@
-import logo from './logo.svg';
+// eslint-disable-next-line
+// import React from 'react';
+import NavBar from './component/NavBar';
+import Intro from './component/Intro';
 import './App.css';
+import './style/landingPage.css';
+import Trending from './component/Trending';
+import Superhero from './component/Superhero';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* INTRO SECTION */}
+      <div className='MyBG'>
+        <NavBar/>
+        <Intro/>
+      </div>
+      {/* END OF INTRO */}
+
+      {/* trending section */}
+      <div className='trending'>
+        <Trending/>
+      </div>
+      {/* end of trending */}
+
+      {/* superhero section */}
+      <div className='superhero'>
+        <Superhero/>
+      </div>
+      {/* end of superhero section */}
     </div>
   );
 }
